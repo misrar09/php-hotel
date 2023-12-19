@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
     <title>Hotels php</title>
 
     <?php
@@ -52,14 +57,16 @@
 <body>
 
 <?php for ($i = 0; $i < count($hotels); $i++) { ?>
-    <ul>
-        <li>Name:<?php echo $hotels[$i]["name"]; ?></li>
-        <li>Description: <?php echo $hotels[$i]["description"]; ?></li>
-        <li>Parking: <?php echo $hotels[$i]["parking"]; ?></li>
-        <li>Vote: <?php echo $hotels[$i]["vote"]; ?></li>
-        <li>Distance to Center: <?php echo $hotels[$i]["distance_to_center"]; ?></li>
+    <div class="container">
+    <div class="row">
+        <div class="col">Name: <?php echo $hotels[$i]["name"]; ?></div>
+        <div class="col">Description: <?php echo $hotels[$i]["description"]; ?></div>
+        <div class="col">Parking: <?php echo $hotels[$i]["parking"]; ?></div>
+        <div class="col">Vote: <?php echo $hotels[$i]["vote"]; ?></div>
+        <div class="col">Distance to Center: <?php echo $hotels[$i]["distance_to_center"]; ?></div>
+    </div>
 
-    </ul>
+    </div>
 <?php } ?>
 
 
@@ -68,6 +75,5 @@
 
 
 
-    
 </body>
 </html>
